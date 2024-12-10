@@ -30,6 +30,11 @@ switch (OperatingSystem.current()) {
 repositories {
     mavenCentral()
     mavenLocal()
+
+    maven {
+        "https://overture-7421.github.io/overturelib/repo/"
+    }
+
 }
 
 project.ext.lwjglVersion = "3.3.4"
@@ -50,7 +55,7 @@ nativeConfig.dependencies.add wpilibTools.deps.wpilib("ntcore")
 nativeConfig.dependencies.add wpilibTools.deps.wpilib("wpilibNewCommands")
 
 dependencies {
-    api 'com.overture.ftc:overftclib:0.0.0'
+    api 'com.overture.ftc:overftclib:0.1.0'
 
     implementation 'edu.wpi.first.ntcore:ntcore-java:2024.3.2'
     implementation 'edu.wpi.first.wpimath:wpimath-java:2024.3.2'
